@@ -13,12 +13,13 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>13</version>
+            <version>21</version>
         </dependency>
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>13</version>
+            <version>21</version>
         </dependency>
     </dependencies>
     <build>
@@ -34,9 +35,9 @@
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.4</version>
+                <version>0.0.8</version>
                 <configuration>
-                    <mainClass>com.mohid.masu_adminapp.App</mainClass>
+                    <mainClass>com.mohid.masu.admin.App</mainClass>
                 </configuration>
                 <executions>
                     <execution>

@@ -32,6 +32,15 @@ public class DashboardController {
             e.printStackTrace();
         }
     }
+    
+    @FXML
+    private void goToManageEvents() {
+        try {
+            App.setRoot("/com/mohid/masu/admin/view/manageEvents");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     private void logout() {

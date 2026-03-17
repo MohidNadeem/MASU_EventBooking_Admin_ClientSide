@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.mohid.masu.admin.controller.ManageStudentsController"
+            stylesheets="@../assets/styles.css"
+            prefWidth="1100.0" prefHeight="700.0"
+            styleClass="dashboard-bg">
+
+    <left>
+        <VBox prefWidth="240.0" spacing="18.0" styleClass="sidebar">
+            <padding>
+                <Insets top="30" right="20" bottom="30" left="20"/>
+            </padding>
+
+            <children>
+                <Label text="MASU Admin" styleClass="sidebar-title"/>
+                <Label text="Manage Students" styleClass="sidebar-subtitle"/>
+
+                <VBox VBox.vgrow="ALWAYS"/>
+
+                <Button text="Back to Dashboard"
+                        onAction="#goBack"
+                        maxWidth="1.7976931348623157E308"
+                        styleClass="logout-btn"/>
+            </children>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="20.0" styleClass="dashboard-content">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <children>
+                <VBox spacing="8.0">
+                    <children>
+                        <Label text="Manage Students" styleClass="page-title"/>
+                        <Label text="View student accounts and mark students as alumni."
+                               styleClass="page-subtitle"/>
+                    </children>
+                </VBox>
+
+                <VBox spacing="14.0" styleClass="content-card">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+
+                    <children>
+                        <TableView fx:id="studentsTable" prefHeight="430.0" styleClass="students-table">
+                            <columns>
+                                <TableColumn fx:id="fullNameColumn" text="Full Name" prefWidth="180.0"/>
+                                <TableColumn fx:id="usernameColumn" text="Username" prefWidth="120.0"/>
+                                <TableColumn fx:id="genderColumn" text="Gender" prefWidth="90.0"/>
+                                <TableColumn fx:id="statusColumn" text="Status" prefWidth="100.0"/>
+                                <TableColumn fx:id="passwordColumn" text="Password Info" prefWidth="180.0"/>
+                            </columns>
+                        </TableView>
+
+                        <HBox spacing="14.0">
+                            <children>
+                                <Button text="Refresh"
+                                        onAction="#loadStudents"
+                                        prefWidth="130.0"
+                                        prefHeight="42.0"
+                                        styleClass="secondary-btn"/>
+
+                                <Button text="Mark Selected as Alumni"
+                                        onAction="#markSelectedAsAlumni"
+                                        prefWidth="264.0"
+                                        prefHeight="42.0"
+                                        styleClass="primary-btn"/>
+                            </children>
+                        </HBox>
+
+                        <Label fx:id="messageLabel" styleClass="error-label" wrapText="true"/>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

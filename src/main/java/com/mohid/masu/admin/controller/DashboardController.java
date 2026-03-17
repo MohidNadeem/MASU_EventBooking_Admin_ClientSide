@@ -16,6 +16,24 @@ public class DashboardController {
     }
 
     @FXML
+    private void goToManageStudents() {
+        try {
+            App.setRoot("/com/mohid/masu/admin/view/manageStudents");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void goToUpdateAdminPassword() {
+        try {
+            App.setRoot("/com/mohid/masu/admin/view/updateAdminPassword");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
     private void logout() {
         try {
             App.setRoot("/com/mohid/masu/admin/view/login");

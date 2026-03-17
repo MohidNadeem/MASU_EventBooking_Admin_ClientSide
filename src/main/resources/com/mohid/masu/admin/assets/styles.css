@@ -241,3 +241,31 @@
     -fx-background-radius: 12;
     -fx-font-size: 14px;
 }
+
+.students-table {
+    -fx-background-color: white;
+    -fx-border-color: #DDEBDD;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+}
+
+.students-table .column-header-background {
+    -fx-background-color: #E8F5E9;
+    -fx-background-radius: 12 12 0 0;
+}
+
+.students-table .column-header,
+.students-table .filler {
+    -fx-size: 42;
+    -fx-background-color: #E8F5E9;
+}
+
+.students-table .label {
+    -fx-text-fill: green;
+    -fx-font-weight: bold;
+}
+
+.students-table .table-cell {
+    -fx-text-fill: black;
+    -fx-alignment: CENTER;
+}

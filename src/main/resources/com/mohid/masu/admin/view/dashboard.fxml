@@ -32,8 +32,9 @@
                                 styleClass="sidebar-btn"/>
 
                         <Button text="Manage Students"
+                                onAction="#goToManageStudents"
                                 maxWidth="1.7976931348623157E308"
-                                styleClass="sidebar-btn-disabled"/> <!-- Not Working for now -->
+                                styleClass="sidebar-btn"/>
 
                         <Button text="Manage Events"
                                 maxWidth="1.7976931348623157E308"
@@ -107,6 +108,18 @@
                                         prefWidth="180.0"
                                         prefHeight="48.0"
                                         styleClass="primary-btn"/>
+                                
+                                <Button text="Manage Students"
+                                        onAction="#goToManageStudents"
+                                        prefWidth="180.0"
+                                        prefHeight="48.0"
+                                        styleClass="secondary-btn"/>
+
+                                <Button text="Update Password"
+                                        onAction="#goToUpdateAdminPassword"
+                                        prefWidth="190.0"
+                                        prefHeight="48.0"
+                                        styleClass="secondary-btn"/>
 
                                 <Button text="Logout"
                                         onAction="#logout"

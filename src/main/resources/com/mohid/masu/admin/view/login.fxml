@@ -5,26 +5,31 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.mohid.masu.admin.controller.LoginController"
             stylesheets="@../assets/styles.css"
-            prefWidth="1000.0" prefHeight="650.0"
             styleClass="app-bg">
 
     <children>
-        <HBox prefWidth="1000.0" prefHeight="650.0">
+        <HBox AnchorPane.topAnchor="0.0"
+              AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0">
 
             <!-- Making a Left Panel with Title -->
-            <StackPane prefWidth="470.0" prefHeight="650.0" styleClass="left-panel">
+            <StackPane HBox.hgrow="ALWAYS" styleClass="left-panel">
                 <children>
-                    <VBox alignment="CENTER_LEFT" spacing="18.0" maxWidth="320.0">
+                    <VBox alignment="CENTER_LEFT" spacing="18.0" maxWidth="380.0">
+                        <padding>
+                            <Insets top="40" right="40" bottom="40" left="40"/>
+                        </padding>
+
                         <children>
                             <Label text="MASU - Admin" styleClass="brand-title"/>
                             <Label text="Event Booking System"
@@ -39,13 +44,16 @@
             </StackPane>
 
             <!-- Right Login Panel -->
-            <StackPane prefWidth="530.0" prefHeight="650.0" styleClass="right-panel">
+            <StackPane HBox.hgrow="ALWAYS" styleClass="right-panel">
                 <children>
-                    <VBox alignment="CENTER" spacing="20.0">
+                    <VBox alignment="CENTER" spacing="20.0" fillWidth="true">
                         <children>
-                            <VBox alignment="CENTER_LEFT" spacing="16.0" maxWidth="360.0" styleClass="login-card">
+                            <VBox alignment="CENTER_LEFT"
+                                  spacing="16.0"
+                                  maxWidth="420.0"
+                                  styleClass="login-card">
                                 <padding>
-                                    <Insets top="32" right="32" bottom="32" left="32"/>
+                                    <Insets top="36" right="36" bottom="36" left="36"/>
                                 </padding>
 
                                 <children>
@@ -57,6 +65,7 @@
                                             <Label text="Username" styleClass="field-label"/>
                                             <TextField fx:id="usernameField"
                                                        promptText="Enter admin username"
+                                                       maxWidth="1.7976931348623157E308"
                                                        styleClass="modern-field"/>
                                         </children>
                                     </VBox>
@@ -66,6 +75,7 @@
                                             <Label text="Password" styleClass="field-label"/>
                                             <PasswordField fx:id="passwordField"
                                                            promptText="Enter password"
+                                                           maxWidth="1.7976931348623157E308"
                                                            styleClass="modern-field"/>
                                         </children>
                                     </VBox>

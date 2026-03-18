@@ -14,9 +14,14 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("/com/mohid/masu/admin/view/login"), 1000, 650);
-        stage.setTitle("MASU Admin");
+        scene = new Scene(loadFXML("/com/mohid/masu/admin/view/login"));
+        stage.setTitle("MASU Admin Panel");
         stage.setScene(scene);
+
+        // Making it full sized window
+        stage.setResizable(true);
+        stage.setMaximized(true);
+
         stage.show();
     }
 

@@ -7,7 +7,6 @@
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.mohid.masu.admin.controller.ManageEventsController"
             stylesheets="@../assets/styles.css"
-            prefWidth="1200.0" prefHeight="720.0"
             styleClass="dashboard-bg">
 
     <left>
@@ -31,7 +30,7 @@
     </left>
 
     <center>
-        <VBox spacing="20.0" styleClass="dashboard-content">
+        <VBox spacing="20.0" styleClass="dashboard-content" fillWidth="true">
             <padding>
                 <Insets top="30" right="30" bottom="30" left="30"/>
             </padding>
@@ -45,20 +44,22 @@
                     </children>
                 </VBox>
 
-                <VBox spacing="14.0" styleClass="content-card">
+                <VBox spacing="14.0" styleClass="content-card" VBox.vgrow="ALWAYS">
                     <padding>
                         <Insets top="20" right="20" bottom="20" left="20"/>
                     </padding>
 
                     <children>
-                        <TableView fx:id="eventsTable" prefHeight="470.0" styleClass="students-table">
+                        <TableView fx:id="eventsTable"
+                                   VBox.vgrow="ALWAYS"
+                                   styleClass="students-table">
                             <columns>
-                                <TableColumn fx:id="titleColumn" text="Title" prefWidth="160.0"/>
+                                <TableColumn fx:id="titleColumn" text="Title" prefWidth="230.0"/>
                                 <TableColumn fx:id="typeColumn" text="Type" prefWidth="90.0"/>
                                 <TableColumn fx:id="dateColumn" text="Date" prefWidth="110.0"/>
                                 <TableColumn fx:id="startTimeColumn" text="Start Time" prefWidth="90.0"/>
                                 <TableColumn fx:id="endTimeColumn" text="End Time" prefWidth="90.0"/>
-                                <TableColumn fx:id="venueColumn" text="Venue" prefWidth="160.0"/>
+                                <TableColumn fx:id="venueColumn" text="Venue" prefWidth="170.0"/>
                                 <TableColumn fx:id="statusColumn" text="Status" prefWidth="100.0"/>
                                 <TableColumn fx:id="costColumn" text="Cost" prefWidth="80.0"/>
                                 <TableColumn fx:id="participantsColumn" text="Participants" prefWidth="110.0"/>

@@ -13,7 +13,6 @@
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.mohid.masu.admin.controller.CreateStudentController"
             stylesheets="@../assets/styles.css"
-            prefWidth="1000.0" prefHeight="650.0"
             styleClass="dashboard-bg">
 
     <left>
@@ -37,7 +36,7 @@
     </left>
 
     <center>
-        <VBox spacing="22.0" styleClass="dashboard-content">
+        <VBox spacing="22.0" styleClass="dashboard-content" fillWidth="true">
             <padding>
                 <Insets top="30" right="30" bottom="30" left="30"/>
             </padding>
@@ -51,7 +50,9 @@
                     </children>
                 </VBox>
 
-                <VBox spacing="18.0" maxWidth="520.0" styleClass="content-card">
+                <VBox spacing="18.0"
+                      maxWidth="560.0"
+                      styleClass="content-card">
                     <padding>
                         <Insets top="28" right="28" bottom="28" left="28"/>
                     </padding>
@@ -62,6 +63,7 @@
                                 <Label text="Full Name" styleClass="field-label"/>
                                 <TextField fx:id="fullNameField"
                                            promptText="Enter full name"
+                                           maxWidth="1.7976931348623157E308"
                                            styleClass="modern-field"/>
                             </children>
                         </VBox>
@@ -71,6 +73,7 @@
                                 <Label text="Username" styleClass="field-label"/>
                                 <TextField fx:id="usernameField"
                                            promptText="Enter username"
+                                           maxWidth="1.7976931348623157E308"
                                            styleClass="modern-field"/>
                             </children>
                         </VBox>
@@ -80,6 +83,7 @@
                                 <Label text="Password" styleClass="field-label"/>
                                 <PasswordField fx:id="passwordField"
                                                promptText="Enter password"
+                                               maxWidth="1.7976931348623157E308"
                                                styleClass="modern-field"/>
                             </children>
                         </VBox>
@@ -89,8 +93,8 @@
                                 <Label text="Gender" styleClass="field-label"/>
                                 <ComboBox fx:id="genderComboBox"
                                           promptText="Select gender"
-                                          styleClass="modern-combo"
-                                          prefWidth="464.0"/>
+                                          maxWidth="1.7976931348623157E308"
+                                          styleClass="modern-combo"/>
                             </children>
                         </VBox>
 
@@ -115,6 +119,8 @@
                                styleClass="error-label"/>
                     </children>
                 </VBox>
+
+                <VBox VBox.vgrow="ALWAYS"/>
             </children>
         </VBox>
     </center>

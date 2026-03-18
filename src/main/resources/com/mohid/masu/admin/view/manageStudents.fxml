@@ -7,12 +7,12 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.mohid.masu.admin.controller.ManageStudentsController"
             stylesheets="@../assets/styles.css"
-            prefWidth="1100.0" prefHeight="700.0"
             styleClass="dashboard-bg">
 
     <left>
@@ -36,7 +36,7 @@
     </left>
 
     <center>
-        <VBox spacing="20.0" styleClass="dashboard-content">
+        <VBox spacing="20.0" styleClass="dashboard-content" fillWidth="true">
             <padding>
                 <Insets top="30" right="30" bottom="30" left="30"/>
             </padding>
@@ -50,19 +50,21 @@
                     </children>
                 </VBox>
 
-                <VBox spacing="14.0" styleClass="content-card">
+                <VBox spacing="14.0" styleClass="content-card" VBox.vgrow="ALWAYS">
                     <padding>
                         <Insets top="20" right="20" bottom="20" left="20"/>
                     </padding>
 
                     <children>
-                        <TableView fx:id="studentsTable" prefHeight="430.0" styleClass="students-table">
+                        <TableView fx:id="studentsTable"
+                                   VBox.vgrow="ALWAYS"
+                                   styleClass="students-table">
                             <columns>
-                                <TableColumn fx:id="fullNameColumn" text="Full Name" prefWidth="180.0"/>
-                                <TableColumn fx:id="usernameColumn" text="Username" prefWidth="120.0"/>
-                                <TableColumn fx:id="genderColumn" text="Gender" prefWidth="90.0"/>
-                                <TableColumn fx:id="statusColumn" text="Status" prefWidth="100.0"/>
-                                <TableColumn fx:id="passwordColumn" text="Password Info" prefWidth="180.0"/>
+                                <TableColumn fx:id="fullNameColumn" text="Full Name" prefWidth="220.0"/>
+                                <TableColumn fx:id="usernameColumn" text="Username" prefWidth="150.0"/>
+                                <TableColumn fx:id="genderColumn" text="Gender" prefWidth="100.0"/>
+                                <TableColumn fx:id="statusColumn" text="Status" prefWidth="120.0"/>
+                                <TableColumn fx:id="passwordColumn" text="Password Info" prefWidth="220.0"/>
                             </columns>
                         </TableView>
 

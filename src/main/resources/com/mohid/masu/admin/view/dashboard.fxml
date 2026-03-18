@@ -5,13 +5,13 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.mohid.masu.admin.controller.DashboardController"
             stylesheets="@../assets/styles.css"
-            prefWidth="1000.0" prefHeight="650.0"
             styleClass="dashboard-bg">
 
     <left>
@@ -54,7 +54,7 @@
     </left>
 
     <center>
-        <VBox spacing="22.0" styleClass="dashboard-content">
+        <VBox spacing="22.0" styleClass="dashboard-content" fillWidth="true">
             <padding>
                 <Insets top="30" right="30" bottom="30" left="30"/>
             </padding>
@@ -70,23 +70,31 @@
 
                 <HBox spacing="40.0">
                     <children>
-                        <StackPane prefWidth="220.0" prefHeight="130.0" styleClass="info-card white-card">
+                        <StackPane prefWidth="330.0" minHeight="130.0" styleClass="info-card white-card">
                             <children>
-                                <VBox alignment="CENTER" spacing="8.0">
+                                <VBox alignment="CENTER" spacing="8.0" maxWidth="240.0">
                                     <children>
                                         <Label text="Students" styleClass="info-card-title-dark"/>
-                                        <Label text="Create and manage student accounts" styleClass="info-card-text-dark" wrapText="true"/>
+                                        <Label text="Create and manage student accounts"
+                                               styleClass="info-card-text-dark"
+                                               wrapText="true"/>
                                     </children>
                                 </VBox>
                             </children>
                         </StackPane>
+                        
+                        <StackPane prefWidth="120.0" minHeight="130.0" styleClass="info-card white-card">
+                            
+                        </StackPane>
 
-                        <StackPane prefWidth="220.0" prefHeight="130.0" styleClass="info-card white-card">
+                        <StackPane prefWidth="330.0" minHeight="130.0" styleClass="info-card white-card">
                             <children>
-                                <VBox alignment="CENTER" spacing="8.0">
+                                <VBox alignment="CENTER" spacing="8.0" maxWidth="240.0">
                                     <children>
                                         <Label text="Events" styleClass="info-card-title-dark"/>
-                                        <Label text="Update event details and allocations" styleClass="info-card-text-dark" wrapText="true"/>
+                                        <Label text="Update event details and allocations"
+                                               styleClass="info-card-text-dark"
+                                               wrapText="true"/>
                                     </children>
                                 </VBox>
                             </children>
@@ -102,18 +110,23 @@
                     <children>
                         <Label text="Quick Actions" styleClass="section-title"/>
 
-                        <HBox spacing="16.0">
+                        <HBox spacing="16.0" fillHeight="true">
                             <children>
                                 <Button text="Create Student"
                                         onAction="#goToCreateStudent"
                                         prefWidth="180.0"
                                         prefHeight="48.0"
                                         styleClass="primary-btn"/>
-                                
+
                                 <Button text="Manage Students"
                                         onAction="#goToManageStudents"
                                         prefWidth="180.0"
                                         prefHeight="48.0"
+                                        styleClass="secondary-btn"/>
+                                
+                                <Button text="Manage Events"
+                                        onAction="#goToManageEvents"
+                                        prefWidth="180.0" prefHeight="48.0"
                                         styleClass="secondary-btn"/>
 
                                 <Button text="Update Password"
@@ -131,6 +144,8 @@
                         </HBox>
                     </children>
                 </VBox>
+
+                <VBox VBox.vgrow="ALWAYS"/>
             </children>
         </VBox>
     </center>
